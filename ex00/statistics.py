@@ -1,6 +1,10 @@
-import pandas as pd
-
+# data = {
+# 	"2": [1, 2, 3, 4, 5, 6, 7, 10]
+# }
+# s = pd.DataFrame(data)
+# print(s.describe())
 def mean(li : list):
+	"""calculate mean"""
 	a = 0.0
 	cnt = 0
 	for nbr in li:
@@ -13,6 +17,7 @@ def mean(li : list):
 
 
 def median(li : list):
+	"""calculate median"""
 	cnt = 0
 	for nbr in li:
 		cnt += 1
@@ -27,6 +32,7 @@ def median(li : list):
 
 
 def quartile(li : list):
+	"""calculate quartile"""
 	cnt = 0
 	for nbr in li:
 		cnt += 1
@@ -61,6 +67,7 @@ def quartile(li : list):
 
 
 def std(li : list):
+	"""calculate std"""
 	a = 0.0
 	cnt = 0
 	for nbr in li:
@@ -78,6 +85,7 @@ def std(li : list):
 	return print(f"std : {sum ** 0.5}")
 
 def var(li : list):
+	"""calculate var"""
 	a = 0.0
 	cnt = 0
 	for nbr in li:
@@ -94,7 +102,9 @@ def var(li : list):
 	sum = sum / cnt
 	return print(f"var : {sum}")
 
+
 def ft_statistics(*args_o, **kwargs) -> None:
+	"calculate some methods in pd.DataFrame(data)"
 	args1 = list(args_o)
 	keys = list(kwargs.keys())
 	
